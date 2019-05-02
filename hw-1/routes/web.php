@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@login');
+Route::get('/dashboard', 'IndexController@index');
+Route::get('/units', 'UnitsController@units');
+Route::get('/units/{id}', 'UnitsController@unitView');
